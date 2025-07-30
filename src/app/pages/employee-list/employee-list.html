@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-header bg-warning">Employee List</div>
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Serial No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Employee Type</th>
+            <th>Join Date</th>
+            <th>Department Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of employeeList; track $index) {
+          <tr>
+            <td>{{ $index + 1 }}</td>
+            <td>{{ item.fullName }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.phone }}</td>
+            <td>{{ item.employeeType }}</td>
+            <td>{{ item.dateOfJoining | date : "dd-MM-yyyy" }}</td>
+            <td>
+              {{ item.departmentName }} <br />
+              {{ item.designationName }}
+            </td>
+            <td>
+              <button
+                class="btn btn-success"
+                (click)="onEditEmployee(item.employeeId)"
+              >
+                Edit
+              </button>
+              <button
+                class="btn btn-danger"
+                (click)="onDelete(item.employeeId)"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
