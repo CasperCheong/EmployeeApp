@@ -1,5 +1,5 @@
 # EmployeeApp
-
+EmployeeApp is a simple Angular web application that demonstrates the basic CRUD (Create, Read, Update, Delete) operations for managing employee details. It interacts with a free, publicly available mock REST API to simulate real-world backend functionality.
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
 
 ## Development server
